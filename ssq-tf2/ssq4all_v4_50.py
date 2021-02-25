@@ -17,7 +17,7 @@ tf.compat.v1.app.flags.DEFINE_float('learning_rate', 0.0001, 'learning rate.')
 tf.compat.v1.app.flags.DEFINE_string('model_dir', './model4all_v4', 'model save path.')
 tf.compat.v1.app.flags.DEFINE_string('file_path', os.path.abspath('./data/poems.txt'), 'file name of poems.')
 tf.compat.v1.app.flags.DEFINE_string('model_prefix', 'poems', 'model save prefix.')
-tf.compat.v1.app.flags.DEFINE_integer('epochs', 1000001, 'train how many epochs.')
+tf.compat.v1.app.flags.DEFINE_integer('epochs', 500001, 'train how many epochs.')
 tf.compat.v1.app.flags.DEFINE_integer('times', 10, 'train how many epochs.')
 FLAGS = tf.compat.v1.app.flags.FLAGS
 tf.compat.v1.disable_eager_execution()
@@ -72,7 +72,7 @@ def run_training():
         try:
             # for epoch in range(start_epoch, FLAGS.epochs):
             epoch = start_epoch
-            FLAGS.epochs=1000001
+            FLAGS.epochs=500001
             print('till',FLAGS.epochs)
             # for epoch in range(start_epoch, FLAGS.epochs):
             while(epoch<FLAGS.epochs):
